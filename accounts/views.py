@@ -8,15 +8,24 @@ from rest_framework_simplejwt.tokens import RefreshToken
 from django.contrib.auth import authenticate
 from .serializers import UserProfileSerializer
 from django.core.mail import EmailMessage
-
-
-
+from referral.models import Referral
+from datetime import timedelta, date
 
 
 @api_view(['POST'])
 def normal_register(request):
     email = request.data.get('email', None)
     password = request.data.get('password', None)
+    referral_code = request.data.get('referral_code', None)
+    
+    if referral_code:
+        referral = Referral.objects.get(referral_code=referral_code)
+        profile = referral.referred_by
+
+        profile.is_subscribed = True
+        profile.subsciption_expires_on = date.today() + timedelta(days=30)
+        profile.save()
+
 
     if email is None or password is None:
         return Response(

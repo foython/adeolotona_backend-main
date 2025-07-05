@@ -17,6 +17,6 @@ class Referral(models.Model):
             super().save(*args, **kwargs)
 
 
-
+ 
 def generate_unique_referral_code():
     return str(uuid.uuid4())[:8].upper() 
