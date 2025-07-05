@@ -13,7 +13,8 @@ urlpatterns = [
     # accounts
     path('api/auth/', include('accounts.urls')),
     path('api/subscription_app/', include('subscription_app.urls')),
-    path('api/analysis/', include('hair_analysis_and_tips.urls'))
+    path('api/analysis/', include('hair_analysis_and_tips.urls')),
+    path('api/referral/', include('referral.urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

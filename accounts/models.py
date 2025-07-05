@@ -45,7 +45,7 @@ class UserProfile(models.Model):
     current_styling_product = models.CharField(max_length=100, blank=True, null=True)
     current_product_satisfection = models.CharField(max_length=100, blank=True, null=True)
     hair_goals = models.CharField(max_length=100, blank=True, null=True)
-    hair_photos = models.ManyToManyField(HairPhoto, blank=True, null=True)
+    hair_photos = models.ManyToManyField(HairPhoto, blank=True) 
 
 
     # in app hair data

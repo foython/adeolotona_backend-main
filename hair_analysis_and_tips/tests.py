@@ -7,7 +7,8 @@ SERPAPI_API_KEY = "7c17e8d16f974503677717bc7627d163d348870502a53b7ab690a8cb601ab
 params = {
     "api_key": SERPAPI_API_KEY, 
     "engine": "amazon",
-    "num": 10,
+    "amazon_domain": "amazon.com.au",        
+    "q": "wireless earbuds",
     "k": "Protein reconstructor treatments; Strengthening deep conditioners; Protein-rich leaveins"
 }
 

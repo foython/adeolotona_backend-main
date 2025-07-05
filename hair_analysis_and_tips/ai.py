@@ -59,7 +59,7 @@ def run_analyze_hair(uploaded_images, user_data=None):
     Returns: Dict with keys: analysis_report (markdown string), tips (list), routine (dict)
     """
     #Gemini
-    genai.configure(api_key="AIzaSyCFfTSOhpnzn-b01MEGY_KaxWy8UKt7SZI")
+    genai.configure(api_key="AIzaSyDko-jdIuxs3paqWXf-a7fczWpY8W7o014")
     model = genai.GenerativeModel('gemini-2.5-flash-preview-05-20')
  
  
@@ -81,7 +81,7 @@ def run_analyze_hair(uploaded_images, user_data=None):
     You will receive three hair images (Base64, front/back/curl or up_front) and user_data (JSON).
     Return your answer strictly in the following JSON format:
     
-    
+   
     "analysis_report": {{
         "hair_type": {{
           "classification": "Hair type classification (e.g., 2A-2B)",

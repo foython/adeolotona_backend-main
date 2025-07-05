@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'on_bording',
     'subscription_app',
     'hair_analysis_and_tips',
+    'referral',
 
     # third parties
     'rest_framework_simplejwt',
