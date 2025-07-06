@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     # third parties
     'rest_framework_simplejwt',
     'rest_framework',
+    "django_apscheduler",
 ]
 
 
